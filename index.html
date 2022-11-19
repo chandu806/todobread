@@ -39,10 +39,20 @@
         height: 30px;
         text-align: center;
         border-radius: 3px;
-       
         
     }
-    #container{
+    #contain{
+        margin: auto;
+      display: flex;
+      width: 300px;
+       flex-wrap: wrap;
+    }
+    #tr1,#tr2{
+        border: 1px solid black;
+        height: 30px;
+        text-align: center;
+        border-radius: 3px;
+        row-gap:3px;
         margin: auto;
     }
 
@@ -134,8 +144,11 @@ getting();
             tr1.innerText="Edit";
             tr2.innerText="Delete"
 
+            tr1.style.color="green";
+            tr2.style.color="red";
             div.append(tr);
-           
+            tr1.setAttribute('id',"tr1");
+            tr2.setAttribute("id","tr2");
             document.querySelector('#contain').append(div,tr1,tr2);
 
         });
